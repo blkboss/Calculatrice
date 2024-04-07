@@ -1,0 +1,62 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    /*Ce qu'on vient de faire au dessus permet d'annuler le css par defaut. */
+}
+
+body{
+    max-width: 100vw; /* Pour selectionner la largeur maximale de l'ecran */
+    height: 100vh;  /*Pour selectionner la hauteur maximale de l'ecran */
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+.calculatrice{
+    background-color: blanchedalmond;
+    display: flex;
+    flex-direction: column;
+}
+
+.ecran{
+    width: 100%;
+    height: 100px;
+    background-color: aqua;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 5px;
+    font-size: 25px;
+
+}
+
+.touches{
+    display: grid;
+    grid-template-columns: repeat(5,50px);
+    grid-template-rows: repeat(4,50px);
+    grid-gap: 2px;
+}
+
+button[data-key="8"]{
+    grid-row: span 2;
+}
+
+button[data-key="13"]{
+    grid-row: span 2;
+}
+
+#effacer_historique {
+    background-color: rgb(237, 142, 158);
+    border-radius: 3px;
+    
+}
+
+#effacer_historique:hover {
+    background-color: rgb(99, 99, 215);
+}

@@ -1,0 +1,62 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice</title>
+    <link rel="stylesheet" href="calculatrice.css">
+</head>
+<body>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+
+    <div id="historique"></div>
+    
+
+
+    <!--Creons un formulaire-->
+    <form   id="calculatrice_form"  method="post"  action="calcul.php">
+
+
+    <!--Créons une Classe calculatrice-->
+
+    <div class="calculatrice">
+
+        <!--- A l'interieur de la classe calculatrice , créons une classe ecran et une classe touches-->
+
+        <div  id="effacer_historique"   class="button">effacer_historique</div>
+
+        <input type="text"  name="ecran"   id="ecran" class="ecran">
+        <div class="touches">
+            <!--Dans la classe touches , créons des classes buttons dans des balises buttons-->
+            <button data-key="49" type="button" id="b1"  class="button">1</button>
+            <button data-key="50" type="button"  id="b2"  class="button">2</button>
+            <button data-key="51"  type="button" id="b3"  class="button">3</button>
+            <button data-key="187" type="button" id="b4"  class="button"> + </button>
+            <button data-key="8"  type="button"  id="b5"  class="button">C</button>
+            <button data-key="52"  type="button" id="b6"  class="button">4</button>
+            <button data-key="53"  type="button" id="b7"  class="button">5</button>
+            <button data-key="54"  type="button" id="b8"  class="button">6</button>
+            <button data-key="109" type="button" id="b9"  class="button"> - </button>
+            <button data-key="55" type="button" id="b10"  class="button">7</button>
+            <button data-key="56" type="button" id="b11" class="button">8</button>
+            <button data-key="57" type="button"  id="b12" class="button">9</button>
+            <button data-key="40" type="button" id="b19" class="button">(</button>
+            <button data-key="41" type="button" id="b20" class="button">)</button>
+            <button data-key="191" type="button" id="b13" class="button"> / </button>
+            <input type="submit" class="equal" name="equal" value="="> 
+            <button data-key="48" type="button" id="b15" class="button">0</button>
+            <button data-key="32" type="button" id="b16" class="button">00</button>
+            <button data-key="190" type="button" id="b17" class="button">.</button>
+            <button data-key="220" type="button" id="b18" class="button"> * </button>
+            
+        </div>
+    </div>
+</form>
+
+    <script src="calculatrice.js"></script>
+</body>
+</html>
